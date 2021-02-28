@@ -1,12 +1,14 @@
 import React from 'react';
 import CategoryItem from './CategoryItem.js';
+import './NavBar.scss';
 
 const CategoryList = ({navCategory}) => {
 	return (
-		<div>{navCategory.map(CategoryList => (
-			<CategoryItem	CategoryList = { CategoryList }
-										key = { CategoryList.name }/>
-		))}</div>
+			<div className = 'NavBar-category'>{navCategory.map(categoryList => (
+				<CategoryItem	categoryList = { categoryList }
+											key = { categoryList.name }/>
+			))}
+		</div>
 	);
 };
 

@@ -1,29 +1,18 @@
 import React, { useState } from 'react';
 import './NavBar.scss';
 import CategoryList from './CategoryList.js';
+import mocNavCategory from './mocNaviCategory.js'
 
 const NavBar = () => {
-	const [navCategory, setNavCategory] = useState([
-		{
-			name: 'theme',
-			text: '주제별',
-			click: true
-		},
-		{
-			name: 'local',
-			text:	'지역별',
-			click: false
-		}
-	]);
+	const[navCategory, setNavCategory] = useState(() => mocNavCategory)
 
 	return (
 		<div className = "NavBar">
-			<div>
-				<CategoryList navCategory = { navCategory }/>
-			</div>
+			<div className = "NavBar-logo">LXGX</div>
+			<div><CategoryList navCategory = { navCategory }/></div>
 			<div className = "NavBar-login">
-				<div>로그인</div>
-				<div>회원가입</div>
+				<div className = 'login-box'>로그인</div>
+				<div className = 'login-box'>회원가입</div>
 			</div>
 		</div>
 	);

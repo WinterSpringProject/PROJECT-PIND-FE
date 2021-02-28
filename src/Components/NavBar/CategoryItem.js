@@ -1,13 +1,11 @@
 import React from 'react';
-import './NavBar-click.scss';
+import './NavBar.scss';
 
-const CategoryItem = ({CategoryList}) => {
-	const { name, text, click } = CategoryList;
+const CategoryItem = ({categoryList}) => {
+	const { name, text, click } = categoryList;
 
 	return (
-		<div	className = { click ? 'NavBar-click' : 'NavBar-unclick' }>
-			{text}
-		</div>
+		<div className = 'NavBar-click'>{text}</div>
 	);
 };
 export default CategoryItem;

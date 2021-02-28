@@ -1,6 +1,6 @@
 import './App.css';
 import NavBar from './Components/NavBar/NavBar.js';
-import { useState, useCallback } from 'react';
+import React from 'react';
 
 const App = () => {
 

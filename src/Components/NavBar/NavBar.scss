@@ -1,21 +1,72 @@
 .NavBar {
+	--shadow-color: #00000029;
+	--categoryBackground-color:#f5f5f5;
+	--loginFont-color: #c4c4c4;
+	--hoverMenu-color: #ebebeb;
+	--hoverLogin-color: #f1f1f1;
+
 	top: 0px;
 	width: 1920;
-	height: 55px;
-	box-shadow: 0px 1px 8px #00000029;
+	height: 78px;
+	box-shadow: 0px 1px 8px var(--shadow-color);
 	opacity: 1;
 	display: flex;
 	justify-content: space-between;
 
-	.NavBar-menu {
+	.NavBar-logo {
 		display: flex;
+		align-items: center;
+		justify-content: right;
+		padding-left: 500px;
+		cursor: pointer;
 	}
 
 	.NavBar-category {
+		width: 250px;
+		height: 78px;
 		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 50px;
+		padding-right: 300px;
+		cursor: pointer;
+	}
+
+	.NavBar-click {
+		color: black;
+		width: 104px;
+		height: 41px;
+		background: var(--categoryBackground-color);
+		box-shadow: 3px 3px 6px var(--shadow-color);
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:hover {
+			background-color: var(--hoverMenu-color);
+		}
 	}
 
 	.NavBar-login {
+		width: 300px;
 		display: flex;
+		color: var(--loginFont-color);
+		align-items: center;
+		justify-content: space-around;
+		padding-right: 100px;
+		cursor: pointer;
+	}
+
+	.login-box {
+		width: 104px;
+		height: 41px;
+		box-shadow: 3px 3px 6px var(--shadow-color);
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:hover {
+			background-color: var(--hoverLogin-color);
+		}
 	}
 }
