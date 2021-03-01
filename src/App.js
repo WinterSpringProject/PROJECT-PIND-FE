@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 import CardViewTemplate from './components/CardView/CardViewTemplate';
 import CardViewList from './components/CardView/CardViewList';
 import './App.css';
-import NavBar from './Components/NavBar/NavBar.js';
+import mockCard from './components/CardView/CardViewMock';
 
 const App = () => {
-
-	return (
-		<div>
-			<NavBar/>
-		</div>
-	);
+  const [cards, setCards]=useState(()=>(mockCard))
+  return (
+    <div>
+      <CardViewTemplate>
+        <CardViewList cards={cards}/>
+      </CardViewTemplate>
+    </div>
+  );
 }
 
 export default App;
