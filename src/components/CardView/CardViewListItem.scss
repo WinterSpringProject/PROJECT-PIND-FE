@@ -1,0 +1,71 @@
+.CardViewListItem-wrapper {
+	--shadow-color: #00000029;
+	box-shadow: 3px 3px 10px 0 var(--shadow-color);
+	transition: 0.3s;
+	width: 270px;
+	height: 411px;
+	border-radius: 31px;
+
+	.CardViewListItem-thumbnail {
+		position: relative;
+
+		.CardViewListItem-img {
+			background: gray;
+			width: 270px;
+			height: 277px;
+			border-radius: 31px 31px 0 0;
+		}
+	
+		.CardViewListItem-bookmark {
+			background: white;
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			backdrop-filter: blur(2px);
+			-webkit-backdrop-filter: blur(2px);
+			opacity: 31%;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+	
+	.CardViewListItem-top {
+		border-left: solid 3px;
+
+		.CardViewListItem-name {
+			font-size: 15pt;
+		}
+	
+		.CardViewListItem-category {
+			font-size: 8pt;
+			color: #BBBBBB;
+		}
+	
+	}
+	
+	.CardViewListItem-bottom {
+		display: flex;
+
+		.CardViewListItem-userimg {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: black;
+		}
+	
+		.CardViewListItem-user {
+			width: 141px;
+			height: 40px;
+			box-shadow: 3px 3px 6px 0 var(--shadow-color);
+			border-radius: 12px;
+			display: flex;
+			background: #F9F9F9;
+		}
+
+		.CardViewListItem-projectinfo {
+			font-size: 8pt;
+			color: #BBBBBB;
+		}
+	}
+}
