@@ -45,4 +45,4 @@ const mockCard = [
 	}
 ];
 
-export	default	mockCard;
+export default	mockCard;

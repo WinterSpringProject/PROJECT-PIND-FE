@@ -2,7 +2,7 @@ import React from 'react';
 import CategoryItem from './CategoryItem.js';
 import './NavBar.scss';
 
-const CategoryList = ({navCategory}) => {
+const CategoryList = ( {navCategory} ) => {
 	return (
 			<div className = 'NavBar-category'>{navCategory.map(categoryList => (
 				<CategoryItem	categoryList = { categoryList }
