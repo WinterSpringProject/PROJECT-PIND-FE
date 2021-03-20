@@ -6,7 +6,7 @@ const TopViewItem = ({topViewList}) => {
 
 	return (
 		<div className = "list-item">
-			<img className = "list-img" src = {imgSample} alt = "img"/>
+			<img className = "list-img" src = {imgSample} alt = "이미지를 불러 올 수 없습니다."/>
 			<div className = "list-text">{ text }</div>
 		</div>
 	);
