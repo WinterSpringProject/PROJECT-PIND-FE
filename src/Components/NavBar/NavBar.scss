@@ -16,8 +16,9 @@
 	.NavBar-logo {
 		display: flex;
 		align-items: center;
-		justify-content: right;
-		padding-left: 500px;
+		justify-content: center;
+		padding-left: 50px;
+		padding-right: 50px;
 		cursor: pointer;
 	}
 
@@ -28,7 +29,7 @@
 		align-items: center;
 		justify-content: space-between;
 		padding-left: 50px;
-		padding-right: 300px;
+		padding-right: 30px;
 		cursor: pointer;
 	}
 
@@ -45,6 +46,9 @@
 		&:hover {
 			background-color: var(--hoverMenu-color);
 		}
+		&.selected {
+			background-color: aqua;
+		}
 	}
 
 	.NavBar-login {
@@ -53,20 +57,17 @@
 		color: var(--loginFont-color);
 		align-items: center;
 		justify-content: space-around;
-		padding-right: 100px;
 		cursor: pointer;
-	}
 
-	.login-box {
-		width: 104px;
-		height: 41px;
-		box-shadow: 3px 3px 6px var(--shadow-color);
-		border-radius: 12px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		&:hover {
-			background-color: var(--hoverLogin-color);
+		&.box {
+			width: 104px;
+			height: 41px;
+			box-shadow: 3px 3px 6px var(--shadow-color);
+			border-radius: 12px;
+			justify-content: center;
+			&:hover {
+				background-color: var(--hoverLogin-color);
+			}
 		}
 	}
 }

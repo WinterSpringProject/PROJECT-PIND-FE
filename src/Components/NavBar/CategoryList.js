@@ -1,12 +1,28 @@
 import React from 'react';
-import CategoryItem from './CategoryItem.js';
 import './NavBar.scss';
 
-const CategoryList = ({navCategory}) => {
+const CategoryItem = ({ selected, categories, selectMenu }) => {
+	const { name, text, click } = categories;
+
 	return (
-			<div className = 'NavBar-category'>{navCategory.map(categoryList => (
-				<CategoryItem	categoryList = { categoryList }
-											key = { categoryList.name }/>
+		<div 
+			onClick={() => selectMenu(name)}
+			className={`NavBar-click ${selected === name ? 'selected' : ''}`}>
+			{text}
+		</div>
+	);
+};
+
+const CategoryList = ({ selected, categories, selectMenu }) => {
+	return (
+		<div className='NavBar-category'>
+			{categories.map(category => (
+				<CategoryItem	
+					selected = {selected}
+					categories = {category}
+					key = {category.name}
+					selectMenu={selectMenu}
+				/>
 			))}
 		</div>
 	);
