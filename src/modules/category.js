@@ -2,7 +2,7 @@ const SELECT_MENU = 'category/SELECT_MENU';
 
 export const selectMenu = menu => ({ 
 	type: SELECT_MENU,
-	menu
+	payload: menu
 });
 
 const initialState = {
@@ -11,12 +11,10 @@ const initialState = {
 		{
 			name: 'theme',
 			text: '주제별',
-			click: true
 		},
 		{
 			name: 'local',
 			text:	'지역별',
-			click: false
 		}
 	]
 };
@@ -26,7 +24,7 @@ function category(state = initialState, action) {
 		case SELECT_MENU:
 			return {
 				...state,
-				selected: action.menu
+				selected: action.payload
 			};
 		default:
 			return state;
