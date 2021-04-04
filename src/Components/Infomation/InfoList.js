@@ -4,7 +4,7 @@ import axios from 'axios';
 const InfoList = () => {
 	const [data, setData] = useState(null);
 	const onClick = async () => {
-		axios.get('https://cors-anywhere.herokuapp.com/http://52.78.169.232:8080/project/all').then(response => {
+		axios.get('https://cors-anywhere.herokuapp.com/http://52.78.169.232:8080/project/list').then(response => {
 			setData(response.data);
 		});
 	};

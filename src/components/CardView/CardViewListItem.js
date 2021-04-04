@@ -6,7 +6,7 @@ const CardViewListItem = ( {project} ) => {
 	return (
 		<div className="CardViewListItem-wrapper">
 			<div className="CardViewListItem-thumbnail">
-				<img className="CardViewListItem-img" src={logo} alt="" width="200" />
+				<img className="CardViewListItem-img" src={ project.image.path } alt="There is no image" width="200" />
 				<div className="CardViewListItem-bookmark">
 					별
 				</div>
@@ -24,11 +24,12 @@ const CardViewListItem = ( {project} ) => {
 					<img className="CardViewListItem-userimg" src={logo} alt="" width="20"/>
 					<div className="CardViewListItem-userinfo">
 						<div>{project.leader.name}</div>
-						<div>{project.leader.email}</div>
+
 					</div>
 				</div>
 				<div className="CardViewListItem-projectinfo">
-					<div>{project.participateNum} | {project.participateNum}</div>
+					<div>{project.participateNum} | {project.maxParticipateNum}</div>
+					<div>{project.region.region1}</div>
 					<div>{project.region.region2}</div>
 					<div>{project.region.region3}</div>
 				</div>
