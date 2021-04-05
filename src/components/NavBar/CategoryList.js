@@ -4,13 +4,13 @@ import './NavBar.scss';
 const CategoryItem = ({ selected, category, selectMenu }) => {
 	const { name, text } = category;
 	
-	const onClickMenu = (name) => () => {
+	const onClickMenu = () => {
 		selectMenu(name);
 	}
 	
 	return (
 		<div 
-			onClick={onClickMenu(name)}
+			onClick={onClickMenu}
 			className={`NavBar-click ${selected === name ? 'selected' : ''}`}>
 			{text}
 		</div>
