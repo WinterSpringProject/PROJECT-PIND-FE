@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import CardViewTemplate from './components/CardView/CardViewTemplate';
 import CardViewList from './components/CardView/CardViewList';
 import NavBar from './components/NavBar/NavBar';
 import './App.css';
-import mockCard from './components/CardView/CardViewMock';
 import TopView from './components/Top/TopView';
+import InfoList from './components/Infomation/InfoList';
 
 const App = () => {
-  const [cards, setCards]=useState(()=>(mockCard))
+
   return (
     <div>
       <NavBar />
+      <InfoList />
       <TopView />
       <CardViewTemplate>
-        <CardViewList cards={cards}/>
+        <CardViewList />
       </CardViewTemplate>
     </div>
   );
