@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './TopView.scss';
-import mocTopView from './mocTopView';
-import TopViewList from './TopViewList';
+import CategoryContainer from '../../containers/CategoryContainer';
 
 const TopView = () => {
-	const[TopViewData, setTopView] = useState(() => mocTopView)
 
 	return (
 		<div className = "TopView">
 			<div className = "list">
 				<div className = "list-button">Left Button</div>
-				<div className = "list-box"><TopViewList TopViewData = { TopViewData }/></div>
+				{/* <div className = "list-box"><TopViewList TopViewData = { TopViewData }/></div> */}
+				<CategoryContainer />
 				<div className = "list-button">Right Button</div>
 			</div>
 			<div>
