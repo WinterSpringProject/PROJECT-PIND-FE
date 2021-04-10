@@ -6,7 +6,7 @@ const TopViewItem = ({selected, category, selectCategory}) => {
 	const { name, text } = category;
 
 	const onClickCategory = () => {
-		selectCategory(name);
+		selectCategory(text);
 	}
 
 	return (
