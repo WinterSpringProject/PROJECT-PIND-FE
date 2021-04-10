@@ -1,4 +1,4 @@
-const SELECT_MENU = 'category/SELECT_MENU';
+const SELECT_MENU = 'menu/SELECT_MENU';
 
 export const selectMenu = menu => ({ 
 	type: SELECT_MENU,
@@ -7,7 +7,7 @@ export const selectMenu = menu => ({
 
 const initialState = {
 	selected: '',
-	categories: [
+	menus: [
 		{
 			name: 'theme',
 			text: '주제별',
@@ -19,7 +19,7 @@ const initialState = {
 	]
 };
 
-function category(state = initialState, action) {
+function menu(state = initialState, action) {
 	switch(action.type) {
 		case SELECT_MENU:
 			return {
@@ -31,4 +31,4 @@ function category(state = initialState, action) {
 	}
 }
 
-export default category;
+export default menu;

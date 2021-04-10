@@ -1,12 +1,12 @@
 import React from 'react';
 import './NavBar.scss';
-import CategoryContainer from '../../containers/CategoryContainer';
+import MenuContainer from '../../containers/MenuContainer';
 
 const NavBar = () => {
 	return (
 		<div className = "NavBar">
 			<div className = "NavBar-logo">LXGX</div>
-			<CategoryContainer />
+			<MenuContainer />
 			<div className = "NavBar-login">
 				<div className = 'NavBar-login box'>로그인</div>
 				<div className = 'NavBar-login box'>회원가입</div>
