@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import category from './category';
+import menu from './menu';
 
 const rootReducer = combineReducers({
-	category,
+	menu,
 });
 
 export default rootReducer;
