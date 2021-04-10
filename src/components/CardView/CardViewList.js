@@ -14,6 +14,7 @@ const CardViewList = ( ) => {
 		const fetchData = async () => {
 			try {
 				const response = await axios.get('http://52.78.169.232:8080/project/list');
+				setProject(response.data);
 				const filteredProject = selectedCategory ? 
 							response.data.dtoList.filter(data => data.subject.subject1 === selectedCategory) : response.data.dtoList;
 				setProject(filteredProject);

@@ -1,6 +1,6 @@
 const SELECT_MENU = 'menu/SELECT_MENU';
 
-export const selectMenu = menu => ({ 
+export const selectMenu = menu => ({
 	type: SELECT_MENU,
 	payload: menu
 });
