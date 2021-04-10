@@ -1,8 +1,8 @@
 import React from 'react';
 import './NavBar.scss';
 
-const CategoryItem = ({ selected, category, selectMenu }) => {
-	const { name, text } = category;
+const MenuItem = ({ selected, menu, selectMenu }) => {
+	const { name, text } = menu;
 	
 	const onClickMenu = () => {
 		selectMenu(name);
@@ -17,14 +17,14 @@ const CategoryItem = ({ selected, category, selectMenu }) => {
 	);
 };
 
-const CategoryList = ({ selected, categories, selectMenu }) => {
+const MenuList = ({ selected, menus, selectMenu }) => {
 	return (
 		<div className='NavBar-category'>
-			{categories.map(category => (
-				<CategoryItem	
+			{menus.map(menu => (
+				<MenuItem	
 					selected = {selected}
-					category = {category}
-					key = {category.name}
+					menu = {menu}
+					key = {menu.name}
 					selectMenu={selectMenu}
 				/>
 			))}
@@ -32,4 +32,4 @@ const CategoryList = ({ selected, categories, selectMenu }) => {
 	);
 };
 
-export default CategoryList;
+export default MenuList;
