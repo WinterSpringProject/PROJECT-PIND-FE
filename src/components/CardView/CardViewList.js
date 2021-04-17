@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import CardViewListItem from './CardViewListItem';
 import './CardViewList.scss';
 import axios from 'axios';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
+import { Route } from 'react-router-dom';
+import ProjectDetail from '../Project/ProjectDetail';
 
-const CardViewList = ( ) => {
+const CardViewList = () => {
 	const [projects, setProject] = useState(null);
 	const selectedCategory = useSelector(state => state.category.selected);
 	
@@ -28,15 +30,16 @@ const CardViewList = ( ) => {
 		)
 	}
 	return (
-		<div>
+		<div className="CardViewTemplate-wrapper">
 			<div className="CardViewList-wrapper">
 			{projects.map(project => (
 				<CardViewListItem
-					project = {project}
-					key = {project.id}
+				project = {project}
+				key = {project.id}
 				/>
 			))}
 			</div>
+			<Route path="/project" component={ProjectDetail} />
 		</div>
 	);
 };
