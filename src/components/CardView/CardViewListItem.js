@@ -3,10 +3,12 @@ import logo from '../../logo.svg';
 import './CardViewListItem.scss';
 
 const CardViewListItem = ( {project} ) => {
+	const imgUrl = project.file ? `http://52.78.169.232:8080/file?fileName=${project.file.url}`: logo;
+
 	return (
 		<div className="CardViewListItem-wrapper">
 			<div className="CardViewListItem-thumbnail">
-				<img className="CardViewListItem-img" src={ project.image.path } alt="There is no image" width="200" />
+				<img className="CardViewListItem-img" src={imgUrl} alt="There is no image" width="200" />
 				<div className="CardViewListItem-bookmark">
 					별
 				</div>
