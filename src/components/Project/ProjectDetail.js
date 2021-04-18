@@ -1,17 +1,17 @@
 import React, { useEffect, useState }  from 'react';
 import axios from 'axios';
+import { SERVER_IP } from '../../constants/serverInfo';
 import logo from '../../logo.svg';
 import './ProjectDetail.scss';
 
 const ProjectDetail = ({ match }) => {
-	console.log(match.params.id);
 	const [project, setProject] = useState(null);
-	const url = `http://52.78.169.232:8080/project/${match.params.id}`;
+	const url = `${SERVER_IP}/project/${match.params.id}`;
+	
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
 				const response = await axios.get(url);
-				console.log(response.data);
 				setProject(response.data);
 			}
 			catch (e) { console.log(e); }
@@ -24,11 +24,11 @@ const ProjectDetail = ({ match }) => {
 			<div>Loading..</div>
 		)
 	}
-	const imgUrl = project.file ? `http://52.78.169.232:8080/file?fileName=${project.file.url}`: logo;
+	const imgUrl = project.file ? `${SERVER_IP}/file?fileName=${project.file.url}`: logo;
 	return (
 		<div className="ProjectDetail-wrapper">
 			<div className="ProjectDetail-thumbnail">
-				<img className="ProjectDetail-thumbnail img" src={imgUrl} />
+				<img className="ProjectDetail-thumbnail img" src={imgUrl} alt=""/>
 			</div>
 			<div className="ProjectDetail-top">
 				<div className="ProjectDetail-name">

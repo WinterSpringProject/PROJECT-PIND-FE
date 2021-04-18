@@ -3,8 +3,6 @@ import CardViewListItem from './CardViewListItem';
 import './CardViewList.scss';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
-import { Route } from 'react-router-dom';
-import ProjectDetail from '../Project/ProjectDetail';
 
 const CardViewList = () => {
 	const [projects, setProject] = useState(null);
@@ -39,7 +37,6 @@ const CardViewList = () => {
 				/>
 			))}
 			</div>
-			<Route path="/project" component={ProjectDetail} />
 		</div>
 	);
 };

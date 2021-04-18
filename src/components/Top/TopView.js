@@ -8,7 +8,6 @@ const TopView = () => {
 		<div className = "TopView">
 			<div className = "list">
 				<div className = "list-button">Left Button</div>
-				{/* <div className = "list-box"><TopViewList TopViewData = { TopViewData }/></div> */}
 				<CategoryContainer />
 				<div className = "list-button">Right Button</div>
 			</div>
