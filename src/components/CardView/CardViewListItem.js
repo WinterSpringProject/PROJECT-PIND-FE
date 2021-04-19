@@ -11,7 +11,7 @@ const CardViewListItem = ( {project} ) => {
 		<Link to={`/project/${project.id}`} style={{ color: 'inherit', textDecoration: 'inherit' }}>
 			<div className="CardViewListItem-wrapper">
 				<div className="CardViewListItem-thumbnail">
-					<img className="CardViewListItem-img" src={imgUrl} alt="" width="200" />
+					<img className="CardViewListItem-img" src={imgUrl} alt="project thumbnail" width="200" />
 					<div className="CardViewListItem-bookmark">
 						별
 					</div>
@@ -26,7 +26,7 @@ const CardViewListItem = ( {project} ) => {
 					</div>
 				<div className="CardViewListItem-bottom">
 					<div className="CardViewListItem-user">
-						<img className="CardViewListItem-userimg" src={logo} alt="" width="20"/>
+						<img className="CardViewListItem-userimg" src={logo} alt="project thumbnail" width="20"/>
 						<div className="CardViewListItem-userinfo">
 							<div>{project.leader.name}</div>
 

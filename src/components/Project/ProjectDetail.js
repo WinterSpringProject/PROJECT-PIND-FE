@@ -28,7 +28,7 @@ const ProjectDetail = ({ match }) => {
 	return (
 		<div className="ProjectDetail-wrapper">
 			<div className="ProjectDetail-thumbnail">
-				<img className="ProjectDetail-thumbnail img" src={imgUrl} alt=""/>
+				<img className="ProjectDetail-thumbnail img" src={imgUrl} alt="project thumbnail"/>
 			</div>
 			<div className="ProjectDetail-top">
 				<div className="ProjectDetail-name">
