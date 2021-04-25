@@ -3,24 +3,25 @@ import CardViewListItem from './CardViewListItem';
 import './CardViewList.scss';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import { SERVER_IP } from '../../constants/serverInfo';
 
 const CardViewList = () => {
 	const [projects, setProject] = useState(null);
 	const selectedCategory = useSelector(state => state.category.selected);
-	
+
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const response = await axios.get('http://52.78.169.232:8080/project/list');
+				const response = await axios.get(`${SERVER_IP}/project/list`);
 				setProject(response.data.dtoList);
-				const filteredProject = selectedCategory ? 
+				const filteredProject = selectedCategory ?
 							response.data.dtoList.filter(data => data.subject.subject1 === selectedCategory) : response.data.dtoList;
 				setProject(filteredProject);
 			}
 			catch (e) { console.log(e); }
 		};
 		fetchData();
-	}, [selectedCategory]);
+	}, [selectedCategory, projects]);
 
 	if (!projects) {
 		return (
