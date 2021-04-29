@@ -5,16 +5,11 @@ import { SERVER_IP } from '../../constants/serverInfo';
 const InputForm = () => {
 	const [imag, setImage] = useState(null);
 	const [cityURL, setCityURL] = useState("");
-	//const [guURL, setGuURL] = useState("");
-	//const [dongURL, setDongURL] = useState("");
-	//const [addressID, setAddressID] = useState([]);
 	const [cities, setCities] = useState([]);
 	const [guguns, setGuGuns] = useState([]);
 	const [dongs, setDongs] = useState([]);
 	const [subjects, setSubjects] = useState([]);
 	const [topics, setTopics] = useState([]);
-	//const [subjectSelect, setSubjectSelect] = useState("")
-	//const [subject1URL, setSubject1URL] = useState("");
 	const [projectForm, setProjectForm] = useState(
 		{
 			title: "",
@@ -30,7 +25,7 @@ const InputForm = () => {
 				id: ""
 			},
 			maxParticipateNum: "",
-			startDate: "2021-04-10T08:02:50.177Z"
+			startDate: "2021-04-26T08:02:50.177Z"
 		}
 	);
 
@@ -47,7 +42,6 @@ const InputForm = () => {
 	};
 
 	const onChangeRegion = (address) => {
-		console.log(address);
 		setProjectForm({
 			...projectForm,
 			region : {id: address}
@@ -55,7 +49,6 @@ const InputForm = () => {
 	}
 
 	const onChangeSubject = (subject) => {
-		console.log(subject);
 		setProjectForm({
 			...projectForm,
 			subject : {id: subject}
@@ -75,9 +68,9 @@ const InputForm = () => {
 					id: "",
 				},
 				subject: {
-					id: 2
+					id: ""
 				},
-				maxParticipateNum: 20,
+				maxParticipateNum: "",
 				startDate: "2021-04-10T08:02:50.177Z"
 			}
 		)
@@ -120,16 +113,13 @@ const InputForm = () => {
 		const dongdata = await axios.get(`${SERVER_IP}/region?region1=${citySelect}&region2=${guSelect}`);
 		try {
 			setDongs(dongdata.data);
-//			setGuURL(guSelect);
 		} catch (err) {
 			console.log(err);
 		}
 	}
 
 	const onAddressCode = async (dongSelect, address) => {
-//		setDongURL(dongSelect);
 		const addressList = address.filter(addressOne => addressOne.region3 === dongSelect);
-		//console.log("address : ", addressList[0].id);
 		onChangeRegion(addressList[0].id);
 	}
 
@@ -153,7 +143,6 @@ const InputForm = () => {
 
 	const onSubjectSecond = async (subjectSelect, topics) => {
 		const subjectList = topics.filter(topicOne => topicOne.subject2 === subjectSelect)
-		//console.log("filtersub : ", subjectList[0].id);
 		onChangeSubject(subjectList[0].id)
 	}
 

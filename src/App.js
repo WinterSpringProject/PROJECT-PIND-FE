@@ -4,6 +4,7 @@ import './App.css';
 import { Route } from 'react-router-dom';
 import ProjectDetail from './components/Project/ProjectDetail';
 import ThemeScreen from './components/ThemeScreen/ThemeScreen';
+import InputForm from './components/NewProject/InputForm';
 
 const App = () => {
 
@@ -12,6 +13,7 @@ const App = () => {
       <NavBar />
       <Route path="/" component={ThemeScreen} exact={true} />
       <Route path="/project/:id" component={ProjectDetail}/>
+			<Route path="/newproject" component={InputForm} />
     </div>
   );
 }
