@@ -1,71 +1,175 @@
 .CardViewListItem-wrapper {
 	--shadow-color: #00000029;
+	--cardview-width: 250px;
+	--cardview-height: 411px;
+	--cardview-photo-height: (var(--cardview-height) - 130)px;
+
 	box-shadow: 3px 3px 10px 0 var(--shadow-color);
-	transition: 0.3s;
-	width: 270px;
-	height: 411px;
+	transition: 0.5s;
+	width: var(--cardview-width);
+	height: var(--cardview-height);
 	border-radius: 31px;
+	position: relative;
+	//background: darkgoldenrod;
+	&:hover {
+		background: #ececec;
+		//filter: brightness(80%);
+		.CardViewListItem-img {
+			filter: brightness(80%);
+			transition: 0.5s;
+		}
+	}
 
 	.CardViewListItem-thumbnail {
 		position: relative;
 
 		.CardViewListItem-img {
-			background: gray;
-			width: 270px;
+			//background: gray;
+			width: var(--cardview-width);
 			height: 277px;
 			border-radius: 31px 31px 0 0;
 		}
-	
+
 		.CardViewListItem-bookmark {
-			background: white;
+			background: rgba($color: white, $alpha: 0.4);
 			width: 36px;
 			height: 36px;
 			border-radius: 50%;
 			backdrop-filter: blur(2px);
 			-webkit-backdrop-filter: blur(2px);
-			opacity: 31%;
+			//opacity: 31%;
 			position: absolute;
-			top: 0;
-			right: 0;
+			top: 10%;
+			right: 10%;
+		}
+
+		.CardViewListItem-star {
+			width: 23px;
+			height: 23px;
+			position: absolute;
+			top: 6px;
+			right: 6px;
+			//background: red;
 		}
 	}
-	
+
 	.CardViewListItem-top {
+		height: 35px;
+		margin: 19px 19px 15px 19px;
+		//background: red;
 		border-left: solid 3px;
+		position: relative;
 
 		.CardViewListItem-name {
-			font-size: 15pt;
+			//background: blue;
+			padding-left: 9px;
+			padding-bottom: 5px;
+			font-size: 12pt;
 		}
-	
+
 		.CardViewListItem-category {
+			//background: blueviolet;
+			padding-left: 10px;
 			font-size: 8pt;
 			color: #BBBBBB;
 		}
-	
+
 	}
-	
+
 	.CardViewListItem-bottom {
+		//background: brown;
 		display: flex;
+
+		.CardViewListItem-userimgwrap {
+			margin-left: 10px;
+			align-self: center;
+			//background: white;
+		}
 
 		.CardViewListItem-userimg {
 			width: 25px;
 			height: 25px;
 			border-radius: 50%;
-			background: black;
+			//background: rgb(171, 193, 218);
 		}
-	
+
 		.CardViewListItem-user {
-			width: 141px;
+			width: 120px;
 			height: 40px;
-			box-shadow: 3px 3px 6px 0 var(--shadow-color);
+			color: #757575;
+			font-size: 10px;
+			margin-left: 19px;
+			border: 1px solid;
+			border-color: #e9e9e9;
+			//box-shadow: 3px 3px 7px 0 var(--shadow-color);
 			border-radius: 12px;
 			display: flex;
-			background: #F9F9F9;
+			cursor: pointer;
+			&:hover {
+				background-color: #ffffff;
+			}
+			//background: cadetblue;
+		}
+
+		.CardViewListItem-leader {
+			padding-left: 8px;
+			padding-top: 6px;
 		}
 
 		.CardViewListItem-projectinfo {
+			width: 80px;
+			height: 35px;
+			margin-left: 10px;
+			//background: cornflowerblue;
 			font-size: 8pt;
 			color: #BBBBBB;
+		}
+
+		.CardViewListItem-man {
+			//background: chocolate;
+			display: flex;
+		}
+
+		.CardViewListItem-mancount {
+			margin-left: 7px;
+		}
+
+		.CardViewListItem-manicon {
+			//background: chartreuse;
+			margin: 2px 0 0 0;
+			width: 11px;
+		}
+
+		.CardViewListItem-region {
+			//background: coral;
+			margin-top: 1px;
+			display: flex;
+		}
+
+		.CardViewListItem-regionicon {
+			//background: cyan;
+			margin: 1px 0 0 0;
+			width: 11px;
+		}
+
+		.CardViewListItem-regiontext {
+			margin-left: 7px;
+		}
+
+		.CardViewListItem-time {
+			//background: darkmagenta;
+			display: flex;
+			margin-top: 1px;
+		}
+
+		.CardViewListItem-calendaricon {
+			//background: darkseagreen;
+			margin: 1px 0 0 0;
+			width: 11px;
+		}
+
+		.CardViewListItem-calendartext {
+			margin-left: 7px;
 		}
 	}
 }

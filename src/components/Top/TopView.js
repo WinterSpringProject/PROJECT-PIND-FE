@@ -11,12 +11,12 @@ const TopView = () => {
 				<CategoryContainer />
 				<div className = "list-button">Right Button</div>
 			</div>
-			<div>
+			{/*<div>
 				<div className = "searchBar">
 					<input className = "searchBar-input"/>
 					<button className = "searchBar-summit">Search</button>
 				</div>
-			</div>
+			</div>*/}
 		</div>
 	);
 };
