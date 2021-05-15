@@ -82,7 +82,9 @@ const InputForm = () => {
 		formdata.append('file', imag);
 		const res = axios.post(`${SERVER_IP}/project`, formdata);
 		console.log(res);
+		console.log(formdata);
 		onReset();
+		alert('프로젝트 등록완료!.');
 	};
 
 	useEffect(() => {
@@ -119,8 +121,11 @@ const InputForm = () => {
 	}
 
 	const onAddressCode = async (dongSelect, address) => {
-		const addressList = address.filter(addressOne => addressOne.region3 === dongSelect);
+		try {const addressList = address.filter(addressOne => addressOne.region3 === dongSelect);
 		onChangeRegion(addressList[0].id);
+		} catch (err) {
+			console.log(err);
+		}
 	}
 
 	const onSubjectSelect = async () => {
@@ -166,7 +171,7 @@ const InputForm = () => {
 				</p>
 				<p>
 					<select name="region1" onChange={(e) => onGuSelect(e.target.value)}>
-						<option value="city">시 / 도</option>
+						<option value="citydefault" key="city">시 / 도</option>
 						{cities.map(city => (
 						<option value={city.region1}
 										key={city.id}>{city.region1}</option>
@@ -175,7 +180,7 @@ const InputForm = () => {
 				</p>
 				<p>
 					<select name="region2" onChange={(e) => onDongSelect(e.target.value, cityURL)} >
-						<option value="city">구 / 군</option>
+						<option value="gu" key="gu">구 / 군</option>
 						{guguns.map(gugun => (
 						<option value={gugun.region2}
 										key={gugun.id}>{gugun.region2}</option>
@@ -184,7 +189,7 @@ const InputForm = () => {
 				</p>
 				<p>
 					<select name="region3" onChange={(e) => onAddressCode(e.target.value, dongs)}>
-						<option value="city">동 / 리</option>
+						<option value="dong" key="dong">동 / 리</option>
 						{dongs.map(dong => (
 						<option value={dong.region3}
 										key={dong.id}>{dong.region3}</option>
@@ -193,7 +198,7 @@ const InputForm = () => {
 				</p>
 				<p>
 					<select name="subject" onChange={(e) => onSubjectFirst(e.target.value)}>
-						<option value="city">주제</option>
+						<option value="subject" key="subject">주제</option>
 						{subjects.map(subject => (
 							<option value={subject.subject1}
 											key={subject.id}>{subject.subject1}</option>
@@ -201,8 +206,8 @@ const InputForm = () => {
 					</select>
 				</p>
 				<p>
-					<select name="subject" onChange={(e) => onSubjectSecond(e.target.value, topics)}>
-						<option value="city">세부주제</option>
+					<select name="subject2" onChange={(e) => onSubjectSecond(e.target.value, topics)}>
+						<option value="subject2" key="subject2" >세부주제</option>
 						{topics.map(topic => (
 							<option value={topic.subject2}
 											key={topic.id}>{topic.subject2}</option>

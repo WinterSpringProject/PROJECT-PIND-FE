@@ -5,14 +5,15 @@
 	--cardview-photo-height: (var(--cardview-height) - 130)px;
 
 	box-shadow: 3px 3px 10px 0 var(--shadow-color);
-	transition: 0.5s;
 	width: var(--cardview-width);
 	height: var(--cardview-height);
-	border-radius: 31px;
+	border-radius: 20px;
 	position: relative;
+	margin-top: 20px;
 	//background: darkgoldenrod;
 	&:hover {
 		background: #ececec;
+		transition: 0.5s;
 		//filter: brightness(80%);
 		.CardViewListItem-img {
 			filter: brightness(80%);
@@ -27,7 +28,7 @@
 			//background: gray;
 			width: var(--cardview-width);
 			height: 277px;
-			border-radius: 31px 31px 0 0;
+			border-radius: 20px 20px 0 0;
 		}
 
 		.CardViewListItem-bookmark {
