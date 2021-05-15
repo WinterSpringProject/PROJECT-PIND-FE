@@ -5,7 +5,7 @@ import TopViewList from '../components/Top/TopViewList';
 
 const CategoryContainer = ( {selected, categories, selectCategory} ) => {
 	return (
-		<TopViewList 
+		<TopViewList
 			selected = {selected}
 			categories={categories}
 			selectCategory={selectCategory}

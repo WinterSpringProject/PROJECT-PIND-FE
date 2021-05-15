@@ -1,70 +1,95 @@
 .NavBar {
 	--shadow-color: #00000029;
-	--categoryBackground-color:#f5f5f5;
+	--categoryBackground-color: white;
 	--loginFont-color: #c4c4c4;
+	--navbarMenu-color: #c4c4c4;
+	--login-color: #c4c4c4;
 	--hoverMenu-color: #ebebeb;
 	--hoverLogin-color: #f1f1f1;
 
-	top: 0px;
-	width: 1920;
-	height: 78px;
-	box-shadow: 0px 1px 8px var(--shadow-color);
-	opacity: 1;
+	height: 70px;
+	//box-shadow: 0px 1px 8px var(--shadow-color);
 	display: flex;
-	justify-content: space-between;
+	position: relative;
 
 	.NavBar-logo {
+		//background: burlywood;
+		width: 200px;
+		height: 70px;
 		display: flex;
-		align-items: center;
 		justify-content: center;
-		padding-left: 50px;
-		padding-right: 50px;
+		//padding-left: 50px;
+		//padding-right: 50px;
 		cursor: pointer;
 	}
 
+	.NavBar-imag {
+		padding: 17px;
+	}
+
+	.NavBar-container {
+		//background: red;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
 	.NavBar-category {
-		width: 250px;
+		width: 190px;
 		height: 78px;
+		//background-color: blue;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		padding-left: 50px;
-		padding-right: 30px;
+		justify-content: space-around;
 		cursor: pointer;
 	}
 
 	.NavBar-click {
-		color: black;
-		width: 104px;
+		width: 90px;
 		height: 41px;
+		//border-style: solid;
+		//border-radius: 15px;
+		//border-width: 1px;
+		//border-color: #c4c4c4;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 41px;
 		background: var(--categoryBackground-color);
-		box-shadow: 3px 3px 6px var(--shadow-color);
-		border-radius: 12px;
-		display: flex;
+		text-align: center;
+		//margin: 0 auto;
+	//	box-shadow: 3px 3px 6px var(--shadow-color);
+	//	border-radius: 12px;
+	//	display: flex;
 		align-items: center;
 		justify-content: center;
 		&:hover {
+			border-radius: 50px;
 			background-color: var(--hoverMenu-color);
 		}
 		&.selected {
-			background-color: aqua;
+			border-radius: 50px;
+			background-color: var(--hoverMenu-color);
 		}
 	}
 
 	.NavBar-login {
-		width: 300px;
+		width: 250px;
+		//background: blueviolet;
 		display: flex;
-		color: var(--loginFont-color);
 		align-items: center;
-		justify-content: space-around;
+		justify-content: center;
 		cursor: pointer;
 
 		&.box {
-			width: 104px;
+			border: solid;
+			border-radius: 30px;
+			border-width: 1px;
+			border-color: rgb(211, 211, 211);
+			margin: 5px;
+			font-weight: 700;
+			color: rgb(153, 153, 153);
+			width: 90px;
 			height: 41px;
-			box-shadow: 3px 3px 6px var(--shadow-color);
-			border-radius: 12px;
-			justify-content: center;
 			&:hover {
 				background-color: var(--hoverLogin-color);
 			}
