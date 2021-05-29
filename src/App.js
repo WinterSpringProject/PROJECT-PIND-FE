@@ -5,6 +5,8 @@ import { Route } from 'react-router-dom';
 import ProjectDetail from './components/Project/ProjectDetail';
 import ThemeScreen from './components/ThemeScreen/ThemeScreen';
 import InputForm from './components/NewProject/InputForm';
+import Login from './components/Login/Login';
+import SignUp from './components/Login/SignUp';
 
 const App = () => {
 
@@ -14,6 +16,8 @@ const App = () => {
       <Route path="/" component={ThemeScreen} exact={true} />
       <Route path="/project/:id" component={ProjectDetail}/>
 			<Route path="/newproject" component={InputForm} />
+			<Route path="/login" component={Login} />
+			<Route path="/signup" component={SignUp} />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { SERVER_IP } from '../../constants/serverInfo';
+import { Link } from 'react-router-dom';
 
 const InputForm = () => {
 	const [imag, setImage] = useState(null);
@@ -55,26 +56,26 @@ const InputForm = () => {
 		});
 	}
 
-	const onReset = () => {
-		setProjectForm(
-			{
-				title: "",
-				description: "",
-				content : "",
-				leader: {
-					id: 2
-				},
-				region: {
-					id: "",
-				},
-				subject: {
-					id: ""
-				},
-				maxParticipateNum: "",
-				startDate: "2021-04-10T08:02:50.177Z"
-			}
-		)
-	};
+	//const onReset = () => {
+	//	setProjectForm(
+	//		{
+	//			title: "",
+	//			description: "",
+	//			content : "",
+	//			leader: {
+	//				id: 2
+	//			},
+	//			region: {
+	//				id: "",
+	//			},
+	//			subject: {
+	//				id: ""
+	//			},
+	//			maxParticipateNum: "",
+	//			startDate: "2021-04-10T08:02:50.177Z"
+	//		}
+	//	)
+	//};
 
 	const onClick = () => {
 		var formdata = new FormData();
@@ -83,7 +84,7 @@ const InputForm = () => {
 		const res = axios.post(`${SERVER_IP}/project`, formdata);
 		console.log(res);
 		console.log(formdata);
-		onReset();
+		//onReset();
 		alert('프로젝트 등록완료!.');
 	};
 
@@ -153,23 +154,24 @@ const InputForm = () => {
 
 	return (
 		<div>
-				<p>
-					<strong>프로젝트 이름 : </strong>
+			<div className = "">
+				<div>
+					<div>프로젝트 이름 : </div>
 					<input type="text" name="title" value={projectForm.title} onChange={onChangeForm} />
-				</p>
-				<p>
-					<strong>프로젝트 설명 : </strong>
+				</div>
+				<div>
+					<div>프로젝트 설명 : </div>
 					<input type="text" name="description" value={projectForm.description} onChange={onChangeForm} />
-				</p>
-				<p>
-					<strong>프로젝트 소개 : </strong>
+				</div>
+				<div>
+					<div>프로젝트 소개 : </div>
 					<input type="text" name="content" value={projectForm.content} onChange={onChangeForm} />
-				</p>
-				<p>
-					<strong>최대 참가인원 : </strong>
+				</div>
+				<div>
+					<div>최대 참가인원 : </div>
 					<input type="text" name="maxParticipateNum" value={projectForm.maxParticipateNum} onChange={onChangeForm} />
-				</p>
-				<p>
+				</div>
+				<div>
 					<select name="region1" onChange={(e) => onGuSelect(e.target.value)}>
 						<option value="citydefault" key="city">시 / 도</option>
 						{cities.map(city => (
@@ -177,8 +179,8 @@ const InputForm = () => {
 										key={city.id}>{city.region1}</option>
 						))}
 					</select>
-				</p>
-				<p>
+				</div>
+				<div>
 					<select name="region2" onChange={(e) => onDongSelect(e.target.value, cityURL)} >
 						<option value="gu" key="gu">구 / 군</option>
 						{guguns.map(gugun => (
@@ -186,8 +188,8 @@ const InputForm = () => {
 										key={gugun.id}>{gugun.region2}</option>
 						))}
 					</select>
-				</p>
-				<p>
+				</div>
+				<div>
 					<select name="region3" onChange={(e) => onAddressCode(e.target.value, dongs)}>
 						<option value="dong" key="dong">동 / 리</option>
 						{dongs.map(dong => (
@@ -195,8 +197,8 @@ const InputForm = () => {
 										key={dong.id}>{dong.region3}</option>
 						))}
 					</select>
-				</p>
-				<p>
+				</div>
+				<div>
 					<select name="subject" onChange={(e) => onSubjectFirst(e.target.value)}>
 						<option value="subject" key="subject">주제</option>
 						{subjects.map(subject => (
@@ -204,8 +206,8 @@ const InputForm = () => {
 											key={subject.id}>{subject.subject1}</option>
 						))}
 					</select>
-				</p>
-				<p>
+				</div>
+				<div>
 					<select name="subject2" onChange={(e) => onSubjectSecond(e.target.value, topics)}>
 						<option value="subject2" key="subject2" >세부주제</option>
 						{topics.map(topic => (
@@ -213,7 +215,7 @@ const InputForm = () => {
 											key={topic.id}>{topic.subject2}</option>
 						))}
 					</select>
-				</p>
+				</div>
 				<input type="file" accept="image/jpeg, image/jpg, image/png, image/svg, image/gif" onChange={onChange}/>
 				<button onClick={onClick}>제출</button>
 			{/*<div>
@@ -226,6 +228,7 @@ const InputForm = () => {
 				{projectForm.maxParticipateNum}<br/>
 				{projectForm.startDate}<br/>
 			</div>*/}
+			</div>
 		</div>
 	);
 };
