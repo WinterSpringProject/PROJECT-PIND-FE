@@ -15,6 +15,9 @@ const initialState = {
 		{
 			name: 'local',
 			text:	'지역별',
+		{
+			name: 'newProject',
+			text: '새프로젝트'
 		}
 	]
 };
