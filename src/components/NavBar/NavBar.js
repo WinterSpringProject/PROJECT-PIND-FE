@@ -14,8 +14,8 @@ const NavBar = () => {
 			</Link>
 			<div className = "NavBar-container"><MenuContainer /></div>
 			<div className = "NavBar-login">
-				<div className = "NavBar-login box">Log in</div>
-				<div className = "NavBar-login box">Sign up</div>
+				<Link to="/login" className="NavBar-link"><div className = "NavBar-login box">Log in</div></Link>
+				<Link to="/signup" className="NavBar-link"><div className = "NavBar-login box">Sign up</div></Link>
 			</div>
 		</div>
 	);
