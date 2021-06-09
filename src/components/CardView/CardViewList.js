@@ -21,7 +21,7 @@ const CardViewList = () => {
 			catch (e) { console.log(e); }
 		};
 		fetchData();
-	}, [selectedCategory, projects]);
+	}, [selectedCategory]);
 
 	if (!projects) {
 		return (
