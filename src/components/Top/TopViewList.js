@@ -1,5 +1,6 @@
 import React from 'react';
-import imgSample from './imgSample.svg'
+//import imgSample from './imgSample.svg'
+import imgSample from '../../images/categoryimg/programming.jpeg'
 import './TopView.scss';
 
 const TopViewItem = ({selected, category, selectCategory}) => {

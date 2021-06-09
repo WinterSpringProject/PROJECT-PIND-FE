@@ -3,9 +3,11 @@ import axios from 'axios';
 import { SERVER_IP } from '../../constants/serverInfo';
 import logo from '../../logo.svg';
 import './ProjectDetail.scss';
+import PopupDelete from './PopupDelete';
 
 const ProjectDetail = ({ match }) => {
 	const [project, setProject] = useState(null);
+	const [deletePopup, setDeletePopup] = useState(false);
 	const url = `${SERVER_IP}/project/${match.params.id}`;
 
 	useEffect(() => {
@@ -23,10 +25,6 @@ const ProjectDetail = ({ match }) => {
 		return (
 			<div>Loading..</div>
 		)
-	}
-
-	const onDelete = () => {
-		axios.delete(url);
 	}
 
 	const imgUrl = project.file ? `${SERVER_IP}/file?fileName=${project.file.url}`: logo;
@@ -73,7 +71,9 @@ const ProjectDetail = ({ match }) => {
 				</div>
 			</div>
 			<div>
-				<button onClick={onDelete}>삭제</button>
+				<button onClick={() => {setDeletePopup(true)}}>삭제</button>
+				{deletePopup && <PopupDelete onClose={setDeletePopup} url={url}/>}
+				<button>수정</button>
 			</div>
 		</div>
 	);

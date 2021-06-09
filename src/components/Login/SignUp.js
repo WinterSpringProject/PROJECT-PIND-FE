@@ -8,6 +8,7 @@ const SignUp = () => {
 			<input placeholder="Password Check"/>
 			<input placeholder="Email"/>
 			<input placeholder="Name"/>
+			<button>완료</button>
 		</div>
 	);
 };

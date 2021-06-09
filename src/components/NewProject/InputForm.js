@@ -86,6 +86,7 @@ const InputForm = () => {
 		console.log(formdata);
 		//onReset();
 		alert('프로젝트 등록완료!.');
+		window.location = '/';
 	};
 
 	useEffect(() => {
