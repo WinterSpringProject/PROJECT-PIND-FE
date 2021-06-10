@@ -31,14 +31,16 @@ const CardViewListItem = ( {project} ) => {
 					</div>
 				</div>
 				<div className="CardViewListItem-bottom">
-					<div className="CardViewListItem-user">
-						<div className="CardViewListItem-userimgwrap">
-							<img className="CardViewListItem-userimg" src={userimage} alt="project thumbnail" width="20"/>
+					<Link to="/leader" className="LeaderProfile">
+						<div className="CardViewListItem-user">
+							<div className="CardViewListItem-userimgwrap">
+								<img className="CardViewListItem-userimg" src={userimage} alt="project thumbnail" width="20"/>
+							</div>
+							<div className="CardViewListItem-userinfo">
+									<div className="CardViewListItem-leader">{project.leader.name}</div>
+							</div>
 						</div>
-						<div className="CardViewListItem-userinfo">
-							<div className="CardViewListItem-leader">{project.leader.name}</div>
-						</div>
-					</div>
+					</Link>
 					<div className="CardViewListItem-projectinfo">
 						<div className="CardViewListItem-man">
 							<div><img className="CardViewListItem-manicon" src={man} alt="man_icon"/></div>
