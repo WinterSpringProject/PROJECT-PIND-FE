@@ -7,6 +7,7 @@ import ThemeScreen from './components/ThemeScreen/ThemeScreen';
 import InputForm from './components/NewProject/InputForm';
 import Login from './components/Login/Login';
 import SignUp from './components/Login/SignUp';
+import LeaderProfile from './components/LeaderPage/LeaderProfile';
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
 			<Route path="/newproject" component={InputForm} />
 			<Route path="/login" component={Login} />
 			<Route path="/signup" component={SignUp} />
+			<Route path="/leader" component={LeaderProfile} />
     </div>
   );
 }
