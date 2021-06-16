@@ -14,8 +14,8 @@ const CardViewListItem = ( {project} ) => {
 	const imgUrl = project.file ? `${SERVER_IP}/file?fileName=${project.file.url}`: logo;
 
 	return (
-		<Link to={`/project/${project.id}`} style={{ color: 'inherit', textDecoration: 'inherit' }}>
 			<div className="CardViewListItem-wrapper">
+			<Link to={`/project/${project.id}`} style={{ color: 'inherit', textDecoration: 'inherit' }}>
 				<div className="CardViewListItem-thumbnail">
 					<img className="CardViewListItem-img" src={imgUrl} alt="project thumbnail" width="200" />
 					<div className="CardViewListItem-bookmark">
@@ -31,7 +31,7 @@ const CardViewListItem = ( {project} ) => {
 					</div>
 				</div>
 				<div className="CardViewListItem-bottom">
-					<Link to="/leader" className="LeaderProfile">
+					{/*<Link to="/leader" className="LeaderProfile">*/}
 						<div className="CardViewListItem-user">
 							<div className="CardViewListItem-userimgwrap">
 								<img className="CardViewListItem-userimg" src={userimage} alt="project thumbnail" width="20"/>
@@ -40,7 +40,7 @@ const CardViewListItem = ( {project} ) => {
 									<div className="CardViewListItem-leader">{project.leader.name}</div>
 							</div>
 						</div>
-					</Link>
+					{/*</Link>*/}
 					<div className="CardViewListItem-projectinfo">
 						<div className="CardViewListItem-man">
 							<div><img className="CardViewListItem-manicon" src={man} alt="man_icon"/></div>
@@ -58,8 +58,8 @@ const CardViewListItem = ( {project} ) => {
 						</div>
 					</div>
 				</div>
+			</Link>
 			</div>
-		</Link>
 	);
 };
 

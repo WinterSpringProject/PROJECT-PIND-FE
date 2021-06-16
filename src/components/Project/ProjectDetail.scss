@@ -1,5 +1,6 @@
 .ProjectDetail-wrapper {
 	--shadow-color: #00000029;
+	--grid-top-padding: 10px;
 	box-shadow: 3px 3px 10px 0 var(--shadow-color);
 	width: 1000px;
 	height: 700px;
@@ -12,6 +13,7 @@
 	margin: 100px auto;
 	//background: rgb(153, 153, 153);
 	overflow: hidden;
+	font-size: 11px;
 
 	.ProjectDetail-thumbnail {
 		position: relative;
@@ -31,25 +33,35 @@
 	}
 	.ProjectDetail-overview {
 		width: 470px;
-		background: crimson;
+		//background: crimson;
 		align-items: center;
 	}
 
 	.ProjectDetail-info {
-		background: pink;
+		margin-top: 30px;
+		//background: pink;
 		display: flex;
-		align-items: center;
+		//align-items: center;
 	}
 
 	.ProjectDetail-theme1 {
+		display: flex;
+		width: 110px;
+		//height: 50px;
+		padding-left: 20px;
+		padding-top: var(--grid-top-padding);
+		//align-items: center;
+		//background: greenyellow;
 	}
 
 	.ProjectDetail-theme2 {
-
+		width: 330px;
+		padding-top: var(--grid-top-padding);
+		//background: green;
 	}
 
 	.ProjectDetail-top {
-		background: rgb(72, 190, 135);
+		//background: rgb(72, 190, 135);
 	}
 
 	.ProjectDetail-name {
@@ -69,50 +81,119 @@
 	}
 
 	.ProjectDetail-category {
-		background: cadetblue;
-		font-size: 12pt;
-		color: #BBBBBB;
+		display: flex;
+
+		:nth-child(1) {
+			width: 69px;
+			//background: chocolate;
+		}
+		:nth-child(2) {}
+		//background: cadetblue;
 	}
 
 	.ProjectDetail-description {
-		background: blueviolet;
+		display: flex;
+		padding-top: var(--grid-top-padding);
+		:nth-child(1) {
+			width: 80px;
+			//background: chocolate;
+		}
+		:nth-child(2) {
+			width: 300px;
+		}
+		//background: blueviolet;
 	}
 
 	.ProjectDetail-content {
-		background: burlywood;
+		//background: burlywood;
+		display: flex;
+		padding-top: var(--grid-top-padding);
+		:nth-child(1) {
+			width: 80px;
+			//background: chocolate;
+		}
+		:nth-child(2) {
+			width: 300px;
+		}
 	}
 
 	.ProjectDetail-middle {
 		display: flex;
 		//flex-direction: row;
-		background: rgb(119, 145, 49);
+		//background: rgb(119, 145, 49);
+		display: flex;
+		padding-top: var(--grid-top-padding);
+		:nth-child(1) {
+			width: 80px;
+			//background: chocolate;
+		}
+		:nth-child(2) {
+			width: 300px;
+		}
 	}
 
 	.ProjectDetail-region {
-		background: blue;
-		font-size: 10px;
+		display: flex;
+		padding-top: var(--grid-top-padding);
+		:nth-child(1) {
+			width: 80px;
+			//background: chocolate;
+		}
+		:nth-child(2) {
+			width: 300px;
+		}
+		//background: blue;
 	}
+
+	.ProjectDetail-date {
+		display: flex;
+		padding-top: var(--grid-top-padding);
+		:nth-child(1) {
+			width: 80px;
+			//background: chocolate;
+		}
+		:nth-child(2) {
+			width: 300px;
+		}
+	}
+
+	.ProjectDetail-profileTemplate {
+		display: flex;
+		//background: blue;
+	}
+
+	.ProjectDetail-profileLeader {
+		width: 152px;
+		padding-left: 20px;
+		padding-top: 40px;
+		//background:gold
+	}
+	.ProjectDetail-user {
+		width: 100%;
+		display: flex;
+		margin-top: 20px;
+		//box-shadow: 3px 3px 6px 0 var(--shadow-color);
+		//flex-direction: column;
+		//background: cornflowerblue;
+
+		&.userimg {
+			background: gray;
+			margin-right: 20px;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+		}
+
+		&.userinfo {
+			display: block;
+			//background:hotpink;
+			font-size: 10pt;
+		}
 
 	.ProjectDetail-bottom {
 		display: flex;
 		//flex-direction: row;
-		background: coral;
-
-		.ProjectDetail-user {
-			//width: 141px;
-			box-shadow: 3px 3px 6px 0 var(--shadow-color);
-			//flex-direction: column;
-			background: cornflowerblue;
-
-			&.userimg {
-				width: 25px;
-				height: 25px;
-				border-radius: 50%;
-			}
-
-			&.userinfo {
-				font-size: 12pt;
-			}
+		//background: coral;
 		}
 	}
 }
