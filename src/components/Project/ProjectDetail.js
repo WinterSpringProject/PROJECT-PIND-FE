@@ -80,9 +80,9 @@ const ProjectDetail = ({ match }) => {
 				</div>
 			</div>
 			<div>
-				<button onClick={() => {setDeletePopup(true)}}>삭제</button>
+				<button className="Delete-button" onClick={() => {setDeletePopup(true)}}>삭제</button>
 				{deletePopup && <PopupDelete onClose={setDeletePopup} url={url}/>}
-				<button>수정</button>
+				<button className="Update-button">수정</button>
 			</div>
 		</div>
 	);

@@ -1,3 +1,4 @@
+import './Login.scss'
 import axios from 'axios';
 import React, {useState} from 'react';
 import { SERVER_IP } from '../../constants/serverInfo';
@@ -24,8 +25,8 @@ const Login = () => {
 	const handleClick = async () => {
 		await axios.post(`${SERVER_IP}/api/login`, loginForm, { withCredentials: true })
 		.then((response) => {
-			setAccessToken(response);
-			console.log(response.headers);
+			setAccessToken(response.headers.authorization);
+			console.log(response);
 		})
 		.catch(error => {
 			console.log(error);
@@ -34,10 +35,27 @@ const Login = () => {
 
 	return (
 		<div>
-			<input type="text" name="email" placeholder="Email" value={loginForm.email} onChange={onChangeLogin}/>
-			<input type="text" name="pwd" placeholder="Password" value={loginForm.pwd} onChange={onChangeLogin}/>
-			<button onClick={handleClick}>로그인</button>
-			{console.log("obj: ", loginForm)}
+			<div className = "Login-template">
+				<div>
+					<input className = "Login-email"
+								type="text"
+								name="email"
+								placeholder="  Email"
+								autoComplete="username"
+								value={loginForm.email}
+								onChange={onChangeLogin}/>
+					<input className = "Login-pwd"
+								type="password"
+								name="pwd"
+								placeholder="  Password"
+								autoComplete="current-password"
+								id = "password"
+								value={loginForm.pwd}
+								onChange={onChangeLogin}/>
+					<button className="Login-button" onClick={handleClick}>로그인</button>
+				</div>
+			</div>
+			{console.log(accessToken)}
 		</div>
 	);
 };
