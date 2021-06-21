@@ -82,20 +82,24 @@ const CardViewList = () => {
 				/>
 			))}
 			</div>
+			<div className="pagination">
 				<div>
-					{pages.pageList.map((number) => {
-						return(<button key={number} onClick={handlePageNumClick} value={number} name="page">{number}</button>);
-					})}
+					<div className="page-number">
+						{pages.pageList.map((number) => {
+							return(<button className="page-button" key={number} onClick={handlePageNumClick} value={number} name="page">{number}</button>);
+						})}
+					</div>
+					<div className="page-search">
+						<input className = "page-input"
+												type="text"
+												name="page"
+												placeholder="  page"
+												value={inputPage}
+												onChange={onChangePage}/>
+						<button onClick={handlePage}>이동</button>
+					</div>
 				</div>
-				<div>
-					<input className = "Page-input"
-											type="text"
-											name="page"
-											placeholder="page"
-											value={inputPage}
-											onChange={onChangePage}/>
-					<button onClick={handlePage}>이동</button>
-				</div>
+			</div>
 		</div>
 	);
 };

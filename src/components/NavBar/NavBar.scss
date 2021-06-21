@@ -10,30 +10,36 @@
 	height: 70px;
 	display: flex;
 	position: relative;
+	.wrap{
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
 
 	.NavBar-logo {
-		width: 32.5vw;
+		width: 100px;
 		height: 70px;
 		display: flex;
-		flex-direction: row-reverse;
+		//flex-direction: row-reverse;
 		cursor: pointer;
 		//background: chocolate;
 	}
 
 	.NavBar-imag {
-		padding: 17px;
+		//padding: 17px;
+		margin-right: 20px;
 	}
 
 	.NavBar-container {
 		//background: cornflowerblue;
-		flex-grow: 1;
-		padding-left: 100px;
+		//flex-grow: 1;
+		padding-left: 30px;
+		padding-right: 175px;
 		display: flex;
-		flex-direction: row-reverse;
+		//flex-direction: row-reverse;
 	}
 
 	.NavBar-category {
-		width: 290px;
+		//width: 290px;
 		height: 78px;
 		display: flex;
 		align-items: center;
@@ -43,6 +49,7 @@
 	}
 
 	.NavBar-click {
+		margin-left: 5px;
 		width: 90px;
 		height: 41px;
 		font-size: 14px;
@@ -70,7 +77,7 @@
 
 	.NavBar-login {
 		//background: blue;
-		width: 250px;
+		//width: 250px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -92,4 +99,5 @@
 			}
 		}
 	}
+}
 }

@@ -7,6 +7,7 @@ import PIND_logo from '../../PIND_logo.svg';
 const NavBar = () => {
 	return (
 		<div className = "NavBar">
+			<div className = "wrap">
 			<Link to="/">
 				<div className = "NavBar-logo">
 					<img className = "NavBar-imag" src={PIND_logo} alt="Logo_image"/>
@@ -16,6 +17,7 @@ const NavBar = () => {
 			<div className = "NavBar-login">
 				<Link to="/login" className="NavBar-link"><div className = "NavBar-login box">Log in</div></Link>
 				<Link to="/signup" className="NavBar-link"><div className = "NavBar-login box">Sign up</div></Link>
+			</div>
 			</div>
 		</div>
 	);
