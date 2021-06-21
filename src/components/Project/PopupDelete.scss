@@ -14,6 +14,8 @@
 
 .PopupDelete {
 				display: flex;
+				font-size: 14px;
+				border-radius: 20px;
 				width: 300px;
 				height: 200px;
 				position: absolute;
@@ -21,4 +23,17 @@
 				align-items: center;
 				background:#eee;
 				z-index: 2;
+
+				.PopupWrap {
+					.buttons {
+						//background: cadetblue;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						margin-top: 20px;
+						:nth-child(1) {
+							margin-right: 10px;
+						}
+					}
+				}
 }
