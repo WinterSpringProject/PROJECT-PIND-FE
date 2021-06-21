@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { SERVER_IP } from '../../constants/serverInfo';
-import { Link } from 'react-router-dom';
 
 const InputForm = () => {
 	const [imag, setImage] = useState(null);
@@ -56,35 +55,11 @@ const InputForm = () => {
 		});
 	}
 
-	//const onReset = () => {
-	//	setProjectForm(
-	//		{
-	//			title: "",
-	//			description: "",
-	//			content : "",
-	//			leader: {
-	//				id: 2
-	//			},
-	//			region: {
-	//				id: "",
-	//			},
-	//			subject: {
-	//				id: ""
-	//			},
-	//			maxParticipateNum: "",
-	//			startDate: "2021-04-10T08:02:50.177Z"
-	//		}
-	//	)
-	//};
-
 	const onClick = () => {
 		var formdata = new FormData();
 		formdata.append('project', new Blob([JSON.stringify(projectForm)], {type: "application/json"}));
 		formdata.append('file', imag);
-		const res = axios.post(`${SERVER_IP}/project`, formdata);
-		console.log(res);
-		console.log(formdata);
-		//onReset();
+		axios.post(`${SERVER_IP}/project`, formdata);
 		alert('프로젝트 등록완료!.');
 		window.location = '/';
 	};
@@ -219,16 +194,6 @@ const InputForm = () => {
 				</div>
 				<input type="file" accept="image/jpeg, image/jpg, image/png, image/svg, image/gif" onChange={onChange}/>
 				<button onClick={onClick}>제출</button>
-			{/*<div>
-				{projectForm.title}<br/>
-				{projectForm.description}<br/>
-				{projectForm.content}<br/>
-				{projectForm.leader.id}<br/>
-				{projectForm.region.id}<br/>
-				{projectForm.subject.id}<br/>
-				{projectForm.maxParticipateNum}<br/>
-				{projectForm.startDate}<br/>
-			</div>*/}
 			</div>
 		</div>
 	);
