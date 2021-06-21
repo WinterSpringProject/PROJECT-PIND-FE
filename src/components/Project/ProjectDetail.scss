@@ -10,7 +10,7 @@
 	//align-items: center;
 	padding: 20px;
 	justify-content: space-between;
-	margin: 100px auto;
+	margin: 100px auto 0;
 	//background: rgb(153, 153, 153);
 	overflow: hidden;
 	font-size: 11px;
@@ -196,4 +196,26 @@
 		//background: coral;
 		}
 	}
+}
+
+.Delete-button {
+	border: none;
+	border-radius: 5px;
+	color: rgb(75, 75, 75);
+	background: rgb(228, 228, 228);
+	margin-top: 20px;
+	width: 60px;
+	height: 30px;
+	box-shadow: 3px 3px 10px 0 #00000029;
+}
+
+.Update-button {
+	border: none;
+	border-radius: 5px;
+	color: rgb(75, 75, 75);
+	background: rgb(228, 228, 228);
+	margin: 20px 0 0 10px;
+	width: 60px;
+	height: 30px;
+	box-shadow: 3px 3px 10px 0 #00000029;
 }

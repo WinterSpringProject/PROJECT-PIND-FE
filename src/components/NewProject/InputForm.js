@@ -137,11 +137,11 @@ const InputForm = () => {
 				</div>
 				<div>
 					<div>프로젝트 설명 : </div>
-					<input type="text" name="description" value={projectForm.description} onChange={onChangeForm} />
+					<textarea type="text" name="description" value={projectForm.description} onChange={onChangeForm} />
 				</div>
 				<div>
 					<div>프로젝트 소개 : </div>
-					<input type="text" name="content" value={projectForm.content} onChange={onChangeForm} />
+					<textarea type="text" name="content" value={projectForm.content} onChange={onChangeForm} />
 				</div>
 				<div>
 					<div>최대 참가인원 : </div>
