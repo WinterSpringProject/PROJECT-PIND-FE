@@ -87,7 +87,10 @@
 	.imagefile {
 		display: block;
 		margin-top: 10px;
-		:nth-child(2) {
+		:nth-child(1) {
+			margin-right: 37px;
+		}
+		:nth-child(3) {
 			display: block;
 			border: none;
 			border-radius: 5px;

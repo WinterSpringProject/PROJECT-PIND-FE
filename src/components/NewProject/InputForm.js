@@ -201,6 +201,7 @@ const InputForm = () => {
 						</span>
 					</div>
 					<div className = "imagefile">
+						<span>배너 이미지:</span>
 						<input type="file" accept="image/jpeg, image/jpg, image/png, image/svg, image/gif" onChange={onChange}/>
 					</div>
 					<div>
