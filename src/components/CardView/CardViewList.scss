@@ -10,3 +10,49 @@
 	flex-wrap: wrap;
 	overflow: visible;
 }
+
+	.pagination {
+		display: flex;
+		justify-content: center;
+		margin: 30px;
+		.page-number {
+			display: flex;
+			width: 330px;
+			justify-content: space-between;
+			//background: cyan;
+			.page-button {
+				display: block;
+				border: none;
+				border-radius: 5px;
+				color: rgb(99, 99, 99);
+				background: rgb(241, 241, 241);
+				margin-top: 20px;
+				width: 25px;
+				height: 25px;
+				cursor: pointer;
+			}
+		}
+
+		.page-search {
+			display: flex;
+			margin-top: 25px;
+			justify-content: center;
+			.page-input {
+				display: block;
+				border: none;
+				border-radius: 5px;
+				background: rgb(247, 247, 247);
+				width: 70px;
+				height: 25px;
+			}
+			:nth-child(2) {
+				border: none;
+				border-radius: 5px;
+				background: rgb(221, 221, 221);
+				margin-left: 5px;
+				cursor: pointer;
+			}
+			//background: darkcyan;
+		}
+	//background: chocolate;
+}
