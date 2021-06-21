@@ -36,10 +36,12 @@ const PopupDelete = (props) => {
 	return (
 		<div className="PopupBackground">
 			<div className="PopupDelete">
-				<div>프로젝트를 삭제 하겠습니까?</div>
-				<div>
-					<button onClick={onDelete}>확인</button>
-					<button onClick={() => {onClose(false)}}>취소</button>
+				<div className="PopupWrap">
+					<div>프로젝트를 삭제 하겠습니까?</div>
+					<div className="buttons">
+						<button onClick={onDelete}>확인</button>
+						<button onClick={() => {onClose(false)}}>취소</button>
+					</div>
 				</div>
 			</div>
 		</div>
