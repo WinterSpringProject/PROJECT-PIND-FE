@@ -198,24 +198,32 @@
 	}
 }
 
-.Delete-button {
-	border: none;
-	border-radius: 5px;
-	color: rgb(75, 75, 75);
-	background: rgb(228, 228, 228);
-	margin-top: 20px;
-	width: 60px;
-	height: 30px;
-	box-shadow: 3px 3px 10px 0 #00000029;
-}
+.Button-board {
+	width: 1040px;
+	height: 80px;
+	margin-right: auto;
+	margin-left: auto;
+	//background: chocolate;
 
-.Update-button {
-	border: none;
-	border-radius: 5px;
-	color: rgb(75, 75, 75);
-	background: rgb(228, 228, 228);
-	margin: 20px 0 0 10px;
-	width: 60px;
-	height: 30px;
-	box-shadow: 3px 3px 10px 0 #00000029;
+	.Delete-button {
+		border: none;
+		border-radius: 5px;
+		color: rgb(75, 75, 75);
+		background: rgb(228, 228, 228);
+		margin-top: 20px;
+		width: 60px;
+		height: 30px;
+		box-shadow: 3px 3px 10px 0 #00000029;
+	}
+
+	.Update-button {
+		border: none;
+		border-radius: 5px;
+		color: rgb(75, 75, 75);
+		background: rgb(228, 228, 228);
+		margin: 20px 0 0 10px;
+		width: 60px;
+		height: 30px;
+		box-shadow: 3px 3px 10px 0 #00000029;
+	}
 }
